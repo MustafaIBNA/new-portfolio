@@ -1,0 +1,41 @@
+1- Create Burger Menu DONE
+2- Create Hero Section DONE
+=================================
+3- Create a big image on photoshop with a Perfect FRONTEND DEVELOPER
+4- Create a 3d interactive thing
+5- Create about me section 
+6- Create a parallax effect
+7- Create a responsive design
+8- Create a contact form
+9- Create a footer section
+  {/* <Image
+          className={styles.logo}
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+          />
+          <ol>
+          <li>
+          Get started by editing <code>src/app/page.js</code>.
+          </li>
+          <li>Save and see your changes instantly.</li>
+          </ol> */}
+
+
+مكتبة DOMPurify
+  للحماية ضد هجمات XXS
+💡 متى تستخدم sanitizeJS()؟
+الحالة	هل تحتاج Sanitize؟
+عرض تعليقات المستخدمين	✅ أكيد
+بحث فقط (no render)	ممكن لا
+إرسال البيانات للسيرفر	يفضل Escape/Sanitize
+وضع input داخل HTML	✅ لازم
+داخل attributes (زي href أو src)	✅ جدًا
+
+========================
+type confusion javascript
+========================
+Burp Suite and ZAP Proxy: From Beginner to Expert in Just One Hour
+https://www.youtube.com/@gentil.security/videos

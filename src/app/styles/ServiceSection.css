@@ -1,0 +1,205 @@
+.about-section {
+  /* color: var(--text-color); */
+  min-height: 100vh;
+  padding: calc(var(--padding-sections) + var(--padding-sections));
+  background-color: var(--background-dark-gray);
+  border-radius: 16px 16px 0 0;
+}
+
+.split-serv {
+  font-size: calc(var(--heading-size) - 2rem);
+  font-weight: 600;
+}
+
+.serv-1 {
+  border-bottom: 1px solid var(--opacity-border);
+  overflow: hidden;
+  position: relative;
+}
+
+.serv-desc {
+  overflow: hidden;
+}
+
+.serv-1,
+.serv-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.serv-2 {
+  height: 60vh;
+}
+
+.serv-2:not(:last-child) {
+  border-bottom: 1px solid var(--opacity-border);
+}
+
+.serv-2 .serv-number {
+  font-size: 3rem;
+}
+
+.serv-1 span {
+  font-size: 1rem;
+  margin: 1rem 0;
+  display: inline-block;
+  grid-column: 1;
+}
+
+.serv-1 p,
+.serv-2 .serv-details-desc {
+  width: 100%;
+  font-size: 1.3rem;
+  grid-column: 2;
+}
+
+.serv-2 .serv-name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.serv-2 .serv-details-desc {
+  margin: 1rem 0;
+}
+
+.serv-2 .serv-advance p {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  font-weight: bold;
+}
+
+.serv-2 .serv-advance p:not(:last-child) {
+  border-bottom: 1px solid var(--opacity-border);
+}
+
+/* 🖥 العرض الأساسي فوق 1024px – بدون أي تغيير */
+@media (min-width: 768px) {
+  .offer-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📱 موبايلات من 0 لـ 766px */
+@media (max-width: 766px) {
+  .about-section {
+    padding: 1.5rem 5%;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .split-serv {
+    font-size: calc(var(--heading-size) / 3);
+    text-align: center;
+  }
+
+  .serv-1,
+  .serv-2 {
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+  }
+
+  .serv-1 p,
+  .serv-2 .serv-details-desc {
+    font-size: 1rem;
+  }
+
+  .serv-2 .serv-number {
+    font-size: 1.8rem;
+  }
+
+  .serv-2 .serv-name {
+    font-size: 1.6rem;
+  }
+
+  .serv-2 .serv-advance p {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .serv-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 تابلت من 767px لـ 1023px */
+@media (min-width: 767px) and (max-width: 1023px) {
+  .about-section {
+    padding: 2rem 5%;
+  }
+
+  .split-serv {
+    font-size: calc(var(--heading-size) / 2.2);
+    text-align: center;
+  }
+
+  .serv-1,
+  .serv-2 {
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+  }
+
+  .serv-1 p,
+  .serv-2 .serv-details-desc {
+    font-size: 1.15rem;
+  }
+
+  .serv-2 .serv-number {
+    font-size: 2.4rem;
+  }
+
+  .serv-2 .serv-name {
+    font-size: 2.2rem;
+  }
+
+  .serv-2 .serv-advance p {
+    font-size: 1.2rem;
+    padding: 0.7rem 0;
+  }
+
+  .serv-desc {
+    font-size: 1.1rem;
+  }
+}
+
+/* 💻 شاشات متوسطة: من 1357px لـ 1535px */
+@media (min-width: 1022px) and (max-width: 1535px) {
+  .serv-1,
+  .serv-2 {
+    grid-template-columns: 2fr 3fr 0fr;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+  }
+
+  .split-serv {
+    font-size: calc(var(--heading-size) - 3rem);
+  }
+
+  .serv-1 p,
+  .serv-2 .serv-details-desc {
+    font-size: 1.4rem;
+  }
+
+  .serv-2 .serv-number {
+    font-size: 3.2rem;
+  }
+
+  .serv-2 .serv-name {
+    font-size: 3rem;
+  }
+
+  .serv-2 .serv-advance p {
+    font-size: 1.4rem;
+  }
+
+  .serv-desc {
+    font-size: 1.2rem;
+  }
+}

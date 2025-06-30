@@ -1,0 +1,201 @@
+/* ✅ Project Section Styles */
+.project-section {
+  min-height: 100vh;
+  padding: calc(var(--padding-sections) + var(--padding-sections));
+  background-color: var(--background-dark-gray);
+}
+
+.project-heading {
+  font-size: var(--heading-size);
+  font-weight: 600;
+}
+
+.project-description {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  width: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.project-description .split-container {
+  width: 100%;
+  grid-column: 2;
+}
+
+.project-description span {
+  font-size: 1rem;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.project-description p {
+  width: 100%;
+  font-size: 1.3rem;
+  grid-column: 2;
+}
+
+.projects-videos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.project {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+}
+
+.project:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.split-container-project-number {
+  position: relative;
+  width: 100%;
+}
+
+.project-number {
+  font-size: 20rem;
+  line-height: var(--line-high-big-font);
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.project-video {
+  width: 55%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image {
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.project-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* 📱 موبايلات من 0 لـ 766px */
+@media (max-width: 766px) {
+  .split-container-project-number {
+    display: none;
+  }
+  .project-number {
+    display: none;
+  }
+  .project-section {
+    padding: 1.5rem 5%;
+  }
+
+  .project-heading {
+    font-size: calc(var(--heading-size) / 3);
+  }
+
+  .project-description {
+    display: block;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .project-description span,
+  .project-description p {
+    font-size: 1rem;
+  }
+  .project {
+    width: 100%;
+  }
+  .project-video {
+    width: 100%;
+  }
+}
+
+/* 📱 تابلت من 767px لـ 1023px */
+@media (min-width: 767px) and (max-width: 1023px) {
+  .split-container-project-number {
+    display: none;
+  }
+  .project-number {
+    display: none;
+  }
+  .project-section {
+    padding: 2rem 5%;
+  }
+
+  .project-heading {
+    font-size: calc(var(--heading-size) / 2.2);
+  }
+
+  .project-description {
+    display: block;
+    padding: 0;
+    text-align: left;
+  }
+
+  .project-description span,
+  .project-description p {
+    font-size: 1.2rem;
+  }
+  .project {
+    width: 100%;
+  }
+  .project-video {
+    width: 100%;
+  }
+}
+
+/* 💻 شاشات متوسطة: من 1024px لـ 1535px */
+@media (min-width: 1024px) and (max-width: 1535px) {
+  /* .split-container-project-number {
+    display: none;
+  }
+  .project-number {
+    display: none;
+  } */
+  .project-description {
+    grid-template-columns: 2fr 3fr 0fr;
+
+    text-align: left;
+  }
+
+  .project-heading {
+    font-size: calc(var(--heading-size) - 3rem);
+  }
+
+  .project-description span,
+  .project-description p {
+    font-size: 1.4rem;
+  }
+  /* .project {
+    width: 100%;
+  }
+  .project-video {
+    width: 100%;
+  } */
+}

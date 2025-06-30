@@ -1,0 +1,134 @@
+/* .page {
+  position: relative;
+  padding-bottom: 5rem;
+  font-family: "MangoGrotesque";
+  font-size: 3em;
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  grid-template-rows: 20px 1fr 20px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  min-height: 100svh;
+  padding: 0px var(--padding-sections);
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+  background-color: red;
+} */
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  /* display: grid; */
+  grid-template-rows: 20px 1fr 20px;
+  /* align-items: center;
+  justify-items: center; */
+  min-height: 100svh;
+  padding: 0px var(--padding-sections);
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+.container {
+  /* max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem; */
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.linkWrapper {
+  text-align: center;
+}
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: rgb(0, 0, 0);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.hiddenContent {
+  --x: 0px;
+  --y: 0px;
+  --size: 5px;
+  position: absolute;
+  inset: 0;
+  background: rgb(236, 113, 31);
+  color: var(--bg);
+  -webkit-mask-image: radial-gradient(
+    circle at var(--x) var(--y),
+    black var(--size),
+    transparent 0
+  );
+  mask-image: radial-gradient(
+    circle at var(--x) var(--y),
+    black var(--size),
+    transparent 0
+  );
+  pointer-events: none;
+  visibility: hidden;
+}
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

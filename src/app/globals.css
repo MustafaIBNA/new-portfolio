@@ -2,11 +2,83 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@font-face {
+  font-family: "MangoGrotesque";
+  src: url("/fonts/MangoGrotesque-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MangoGrotesque";
+  src: url("/fonts/MangoGrotesque-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a;
+    --foreground: #ededed; */
+    --padding-sections: 40px;
+    --heading-size: 9rem;
+    --line-high-big-font: 0.76;
+    --foreground: #0c0c0c;
+    --background: #d7cab7;
+    --background-dark-gray: #181818;
+    --background-light: #ecebe6;
+    --background-light-text: #181818;
+    --small-text: #b3a89a;
+    --mouse-tail: rgb(135, 136, 131);
+    --white: #fff;
+    --off-white: #e9e8e3;
+    --warm-grey: #94938d;
+    --grey: #8a8a8a;
+    --grey2: #858585;
+    --d-warm-grey: #5b5a55;
+    --d-grey: #232323;
+    --black: #080808;
+    --tweet-border: #373737;
+    --tweet-border-light: #d4d3c9;
+    --tweet-bg: #121212;
+    --tweet-bg-light: #f8f7f3;
+    --app-grid-bg: #212121;
+    --twitter-icon: #292929;
+    --opacity-border: rgba(255, 255, 255, 0.2);
+    --opacity-border-hover: rgba(255, 255, 255, 0.4);
+    --border-light: #c2c2c2;
+    --dark-toggle: #5a5a5a;
+    --extension-text: #8b8b8b;
+    --extension-border: #303030;
+    --app-grid: #111111;
+    --app-grid-l-grey: #7e7f82;
+    --header: #1c1c1c;
+    --search-bar: #202020;
+    --search-bar-line: #3d3d3d;
+    --verified-icon: #2f3031;
+    --footer-dark: #161615;
+    --footer-light: #e1e0db;
+    --form-input: #2e2e2e;
+    --header-btn-border: #4a4a4a;
+    --menu-bg-dark: #202020;
+    --transition: #ecebe7;
+    --cookie-light: #f8f7f3;
+    --cookie-light-underline: rgba(133, 133, 133, 0.4);
+    --footer-bg-input-light: rgba(83, 83, 83, 0.2);
+    /* --bp-xsm: (min-width: 375px);
+    --bp-sm: (min-width: 768px);
+    --bp-md: (min-width: 1024px);
+    --bp-lg: (min-width: 1366px);
+    --bp-xlg: (min-width: 1536px);
+    --bp-1840: (min-width: 1840px);
+    --bp-xxlg: (min-width: 1921px);
+    --bp-retina: (min-width: 2560px);
+    --bp-4k: (min-width: 2800px);
+    --bp-touch: (hover: none) and (pointer: coarse);
+    --bp-nottouch: (hover: hover) and (pointer: fine);
+    --bp-ipadpro: (hover: none) and (pointer: coarse) and (min-width: 1024px); */
   }
 }
 
@@ -14,14 +86,62 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--background);
+  background: var(--menu-bg-dark);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+/* styles/globals.css */
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  background: url("/noise.png");
+  background-repeat: repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 120;
+}
+
+@keyframes noise {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-1px, -1px);
+  }
+  20% {
+    transform: translate(1px, 1px);
+  }
+  30% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  70% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  90% {
+    transform: translate(-1px, 1px);
+  }
 }
 
 * {
@@ -40,3 +160,27 @@ a {
     color-scheme: dark;
   }
 }
+.split-container {
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid #fff; */
+  padding-top: 1rem;
+}
+
+/* veepn-guard-alert */
+/* .App {
+  background-image: url("/noisetext.png");
+  background-position: 50%;
+  background-repeat: repeat;
+  content: "";
+  -webkit-filter: opacity(0.5);
+  filter: opacity(0.5);
+  height: 150%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2001;
+} */
+/* ============================================= */

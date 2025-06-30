@@ -1,0 +1,177 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: var(--padding-sections);
+  height: 100vh;
+  /* background-color: green; */
+  background: var(--foreground);
+  color: var(--background);
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  font-family: "MangoGrotesque";
+  font-size: 3em;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* margin-top: 30px; */
+  /* background-color: blue; */
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+/* .cover-reveal {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--foreground); 
+  z-index: 2;
+  border-radius: 8px;
+} */
+
+.light,
+.light2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: url("/light.png") no-repeat center center;
+  background-size: cover;
+}
+.light2 {
+  right: 0%;
+  transform: scaleX(-1);
+}
+
+.big-text-hero {
+  /* background-color: red; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  margin-top: var(--padding-sections);
+}
+.frontend {
+  font-size: 18rem;
+  transform-origin: center;
+  margin: 0;
+  letter-spacing: 1rem;
+  /* height: 250px; */
+  overflow: hidden;
+  width: 100%;
+  /* background-color: azure; */
+  /* height: 200px; */
+}
+.perfect {
+  font-size: 6rem;
+  /* display: inline-block; */
+  /* margin: 0 0.04em;   */
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /* background-color: aqua; */
+}
+.cap {
+  font-size: 0.2em !important;
+  font-weight: normal;
+  /* color: #2c3333; */
+  text-transform: none;
+  letter-spacing: normal;
+
+  /* font-style: italic; */
+}
+
+/* .poem {
+  width: 100%;
+  font-size: 2.9em;
+  font-weight: bold;
+  background-color: green;
+  height: 100%;
+} */
+
+.line {
+  display: inline-block;
+  /* margin: 0 0.04em;   */
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.myself-image-container {
+  position: absolute;
+  width: 350px;
+  height: 450px;
+  overflow: hidden;
+  left: 50%;
+  top: calc(100% - 450px); /* Center vertically */
+  transform: translate(-50%, 0%);
+  border-radius: 8px;
+  filter: contrast(0.9) brightness(0.9) saturate(0.8);
+}
+.myself-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: bottom center; /* Adjust as needed */
+  background-repeat: no-repeat;
+}
+.hero-bottom {
+  display: flex;
+  /* display: none; */
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  margin-top: 2rem;
+  /* font-size: 1.5rem; */
+  /* font-family: "MangoGrotesque"; */
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  height: 4rem;
+}
+.hero-bottom p {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: tasa-orbiter, Arial, Helvetica, sans-serif;
+  color: var(--small-text);
+  /* bottom: 2rem; */
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.009375rem;
+  line-height: 120%;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.hero-bottom .center-text-hbottom {
+  font-size: 2rem;
+  opacity: 1;
+  letter-spacing: "1px";
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.about-me-hero-section {
+  font-size: 2.3rem;
+  width: 30%;
+  letter-spacing: 0.04rem;
+}
+.status-text {
+  font-size: 4rem;
+  width: 30%;
+  letter-spacing: 0.04rem;
+}
