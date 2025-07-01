@@ -1,6 +1,6 @@
 "use client";
 
-import "../styles/Footer.css"; // Adjust the path as necessary
+import "../styles/Footer.css";
 import { useSplitTextAnimation } from "../hooks/useSplitTextAnimation";
 
 const Footer = () => {
@@ -8,11 +8,14 @@ const Footer = () => {
     text: ".split",
     section: ".footer-content-top",
   });
+
   return (
-    <section className="footer">
+    <footer id="footer" className="footer" aria-labelledby="footer-heading">
       <div className="footer-content-top">
         <div className="split-container">
-          <h1 className="split">LET'S MAKE</h1>
+          <h1 id="footer-heading" className="split">
+            LET'S MAKE
+          </h1>
         </div>
         <div className="split-container">
           <h1 className="split">SOMETHING</h1>
@@ -20,11 +23,10 @@ const Footer = () => {
         <div className="split-container">
           <h1 className="split">COOL</h1>
         </div>
-        {/* <h1>LET'S MAKE SOMETHING COOL</h1> */}
         <span>(OR AT LEAST FUN)</span>
       </div>
 
-      <div className="footer-links">
+      <nav className="footer-links" aria-label="Footer Navigation">
         <div>
           <p>Menu</p>
           <a href="#home">Home</a>
@@ -35,14 +37,25 @@ const Footer = () => {
 
         <div>
           <p>Socials</p>
-          <a href="https://www.linkedin.com/in/mostafaIBNA/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/mostafaIBNA/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
-          <a href="https://github.com/MustafaIBNA" target="_blank">
+          <a
+            href="https://github.com/MustafaIBNA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
-
-          <a href="https://www.youtube.com/@TheProfessorMA" target="_blank">
+          <a
+            href="https://www.youtube.com/@TheProfessorMA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             YouTube
           </a>
         </div>
@@ -61,12 +74,12 @@ const Footer = () => {
             This site is a result of too much coffee and bad life decisions.
           </p>
         </div>
-      </div>
+      </nav>
 
       <div className="footer-bottom">
         <p>© 2025 Mostafa Ashraf — All rights reserved.</p>
       </div>
-    </section>
+    </footer>
   );
 };
 

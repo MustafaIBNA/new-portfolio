@@ -1,49 +1,45 @@
 export const links = [
   {
-    title: "Projects",
+    title: "Home",
 
-    href: "/",
+    href: "#home",
   },
 
   {
-    title: "Agency",
+    title: "Services",
 
-    href: "/",
+    href: "#services",
+  },
+  {
+    title: "My Works",
+
+    href: "#works",
   },
 
   {
-    title: "Expertise",
+    title: "About",
 
-    href: "/",
+    href: "#about",
   },
   {
-    title: "Expertise",
+    title: "Contact",
 
-    href: "/",
-  },
-  {
-    title: "Expertise",
-
-    href: "/",
+    href: "#footer",
   },
 ];
-    
+
 export const footerLinks = [
   {
     title: "GitHub",
-    href: "",
+    href: "https://github.com/MustafaIBNA",
   },
   {
     title: "LinkedIn",
-    href: "",
+    href: "https://www.linkedin.com/in/mostafaIBNA/",
   },
-  {
-    title: "Instagram",
 
-    href: "/",
-  },
   {
     title: "YouTube",
-    href: "",
+    href: "https://www.youtube.com/@TheProfessorMA",
   },
 ];

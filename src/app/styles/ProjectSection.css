@@ -12,7 +12,7 @@
 
 .project-description {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1.5fr 1fr;
   width: 100%;
   padding: 2rem 0;
   overflow: hidden;

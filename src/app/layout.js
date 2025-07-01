@@ -2,17 +2,24 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NoiseLayer from "./NoiseLayer";
 import Header from "./components/Header";
-// import MouseTrail from "./utils/MouseTrail";
-// import LightsCube from "./utils/LightsCube";
+import MouseTrail from "./utils/MouseTrail";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const mangoGrotesque = localFont({
+  src: [
+    {
+      path: "./fonts/MangoGrotesque-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/MangoGrotesque-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-mango",
+  display: "swap",
 });
 
 export const metadata = {
@@ -23,8 +30,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* <MouseTrail /> */}
+      <body className={`${mangoGrotesque.variable} `}>
+        <MouseTrail />
         <Header />
         <NoiseLayer />
         {children}

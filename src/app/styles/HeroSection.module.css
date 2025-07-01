@@ -1,0 +1,132 @@
+/* HeroSection.module.css */
+
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding: calc(4vh + 2rem) calc(2vw + 1rem);
+  min-height: 100vh;
+  background: var(--foreground);
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: "MangoGrotesque";
+  font-size: 3em;
+  text-align: left;
+}
+
+.bigTextHero {
+  width: 100%;
+  margin-top: calc(4vh + 2rem);
+  padding: 0;
+}
+
+.frontend {
+  font-size: clamp(4rem, 18vw, 18rem);
+  margin: 0;
+  letter-spacing: clamp(0.1rem, 1vw, 0.6rem);
+  overflow: hidden;
+  width: 100%;
+  word-break: break-word;
+}
+
+.perfect {
+  font-size: clamp(2rem, 6vw, 6rem);
+  pointer-events: none;
+  width: 100%;
+}
+
+.cap {
+  font-size: 0.2em !important;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.line {
+  display: inline-block;
+  pointer-events: none;
+}
+
+.heroBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: clamp(0.05rem, 0.4vw, 0.2rem);
+  height: 4rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroBottom p {
+  font-family: "tasa-orbiter", Arial, Helvetica, sans-serif;
+  color: var(--small-text);
+  font-size: clamp(0.6rem, 1.5vw, 0.6875rem);
+  font-weight: 700;
+  letter-spacing: clamp(0.01rem, 0.4vw, 0.1rem);
+  line-height: 120%;
+  opacity: 0.5;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 2rem;
+  text-align: center;
+}
+
+.aboutMeHeroSection,
+.statusText {
+  font-size: clamp(1.2rem, 4vw, 2.3rem);
+  width: 100%;
+  max-width: 600px;
+  letter-spacing: 0.04rem;
+  margin: 0 auto;
+}
+
+.statusText {
+  color: var(--accent, #ff69b4);
+}
+@media (min-width: 2560px) {
+  .frontend {
+    font-size: clamp(1.5rem, 20vw, 25rem);
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: 1660px) {
+  .frontend {
+    font-size: clamp(1.5rem, 15vw, 15rem);
+    letter-spacing: 0.02em;
+  }
+}
+@media (max-width: 600px) {
+  .heroSection {
+    padding: 1rem;
+  }
+  .frontend {
+    font-size: clamp(1.5rem, 12vw, 3rem);
+    letter-spacing: 0.02em;
+  }
+}

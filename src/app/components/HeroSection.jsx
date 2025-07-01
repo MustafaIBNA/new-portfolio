@@ -1,66 +1,59 @@
 "use client";
-import "../styles/HeroSection.css";
-import Image from "next/image";
-// gsap.registerPlugin(ScrollTrigger);
+import { useEffect, useRef } from "react";
+import styles from "../styles/HeroSection.module.css";
+import gsap from "gsap";
+
 export default function HeroSection() {
-  // useEffect(() => {
-  //   gsap.to(".cover-reveal", {
-  //     y: "-100%",
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".hero-section",
-  //       start: "top top",
-  //       end: "bottom top",
-  //       scrub: true,
-  //     },
-  //   });
-  // }, []);
+  const heroRef = useRef(null);
+  useEffect(() => {
+    if (document.fonts) {
+      document.fonts.load('1em "MangoGrotesque"').then(() => {
+        document.body.classList.add("mango-loaded");
+      });
+    }
+    if (heroRef.current) {
+      gsap.to(heroRef.current, {
+        y: 400,
+        opacity: 0,
+        scale: 0.9,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "50% 50%",
+          scrub: true,
+        },
+      });
+    }
+  }, []);
 
   return (
-    <>
-      <section className="hero-section">
-        <div className="hero">
-          {/* Main big text */}
-          <div className="big-text-hero">
-            {" "}
-            <h1 className="perfect">
-              A PERFECT <span className="cap">or at least I pretend to be</span>
-            </h1>
-            <h1 className="line tilt-r frontend">FRONTEND DEVELOPER</h1>
-          </div>
-          {/* Status */}
-          <div className="status">
-            <h2 className="about-me-hero-section">
-              I help growing brands and startups gain an unfair advantage
-              through premium, results driven websites.
-            </h2>
-            <h3 className="status-text">
-              STATUS: ✦ Open for Freelance LOCATION: Cairo, Remote Worldwide
-            </h3>
-          </div>
-          {/* My image myself container */}
-          <div className="myself-image-container">
-            <Image
-              className="myself2"
-              src="/myself2.jpg"
-              fill
-              alt="myself"
-              priority
-            />
-          </div>
-          {/* Bottom of the hero Section */}
-          <div className="hero-bottom">
-            <p className="side-text">[SCROLL TO EXPLORE]</p>
-            {/* <p className="side-text center-text-hbottom">TO EXPERIENCE CRAFT</p> */}
-            <p className="right-side-text">
-              based in Cairo, making magic in code
-            </p>
-          </div>
+    <section id="home" className={styles.heroSection} role="banner">
+      <div className={styles.hero} ref={heroRef}>
+        <div className={styles.bigTextHero}>
+          <h1 className={styles.perfect}>
+            A PERFECT{" "}
+            <span className={styles.cap}>or at least I pretend to be</span>
+          </h1>
+          <h2 className={`${styles.line} ${styles.tiltR} ${styles.frontend}`}>
+            FRONTEND DEVELOPER
+          </h2>
         </div>
-
-        {/* الغطاء اللي هيطلع تدريجياً */}
-        {/* <div className="cover-reveal"></div> */}
-      </section>
-    </>
+        <div className={styles.status}>
+          <p className={styles.aboutMeHeroSection}>
+            I help growing brands and startups gain an unfair advantage through
+            premium, results driven websites.
+          </p>
+          <p className={styles.statusText} aria-live="polite">
+            STATUS: ✦ Open for Freelance LOCATION: Cairo, Remote Worldwide
+          </p>
+        </div>
+        <nav className={styles.heroBottom} aria-label="Hero section navigation">
+          <p className={styles.sideText}>[SCROLL TO EXPLORE]</p>
+          <p className={styles.rightSideText}>
+            based in Cairo, making magic in code
+          </p>
+        </nav>
+      </div>
+    </section>
   );
 }

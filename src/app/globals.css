@@ -110,40 +110,6 @@ body {
   z-index: 120;
 }
 
-@keyframes noise {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-1px, -1px);
-  }
-  20% {
-    transform: translate(1px, 1px);
-  }
-  30% {
-    transform: translate(-1px, 1px);
-  }
-  40% {
-    transform: translate(1px, -1px);
-  }
-  50% {
-    transform: translate(0, 0);
-  }
-  60% {
-    transform: translate(1px, 1px);
-  }
-  70% {
-    transform: translate(-1px, -1px);
-  }
-  80% {
-    transform: translate(1px, -1px);
-  }
-  90% {
-    transform: translate(-1px, 1px);
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -167,20 +133,18 @@ a {
   padding-top: 1rem;
 }
 
-/* veepn-guard-alert */
-/* .App {
-  background-image: url("/noisetext.png");
-  background-position: 50%;
-  background-repeat: repeat;
-  content: "";
-  -webkit-filter: opacity(0.5);
-  filter: opacity(0.5);
-  height: 150%;
-  left: 0;
-  pointer-events: none;
+.light,
+.light2 {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 2001;
-} */
-/* ============================================= */
+  height: 100%;
+  z-index: 99999;
+  background: url("/light.png") no-repeat center center;
+  background-size: cover;
+}
+.light2 {
+  right: 0%;
+  transform: scaleX(-1);
+}

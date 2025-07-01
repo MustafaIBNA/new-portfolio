@@ -13,14 +13,15 @@ export default function NavLinks() {
           return (
             <div key={`b_${i}`} className={styles.linkContainer}>
               <motion.div
-                href={href}
                 custom={i}
                 variants={perspective}
                 initial="initial"
                 animate="enter"
                 exit="exit"
               >
-                <a>{title}</a>
+                <a href={href} className={styles.link}>
+                  {title}
+                </a>
               </motion.div>
             </div>
           );
@@ -32,12 +33,15 @@ export default function NavLinks() {
 
             return (
               <motion.a
+                href={href}
                 variants={slideIn}
                 custom={i}
                 initial="initial"
                 animate="enter"
                 exit="exit"
                 key={`f_${i}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {title}
               </motion.a>

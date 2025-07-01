@@ -97,9 +97,13 @@ const ProjectSection = () => {
   );
 
   return (
-    <section className="project-section">
+    <section
+      className="project-section"
+      id="works"
+      aria-labelledby="project-heading"
+    >
       {/* Project Heading and Description */}
-      <div className="split-container">
+      <div aria-hidden="true" role="presentation" className="split-container">
         <h1 className="project-heading">SELECTED WORKS</h1>
       </div>
       <div className="project-description">
@@ -123,7 +127,7 @@ const ProjectSection = () => {
         </div>
 
         {/* First Project */}
-        <div className="project">
+        <article aria-labelledby="project-X" className="project">
           <div className="project-video">
             {/* <h1>image</h1> */}
             {/* <video
@@ -138,15 +142,15 @@ const ProjectSection = () => {
                 className="project-image"
                 src="/project.jpeg"
                 fill
-                alt="Project Image"
+                alt="E-commerce Dashboard for XYZ brand"
                 loading="lazy"
               />
             </div>
           </div>
-        </div>
+        </article>
 
         {/* Second Project */}
-        <div className="project">
+        <article aria-labelledby="project-X" className="project">
           <div className="project-video">
             {/* <h1>image</h1> */}
             {/* <video
@@ -161,12 +165,12 @@ const ProjectSection = () => {
                 className="project-image"
                 src="/project.jpeg"
                 fill
-                alt="Project Image"
+                alt="E-commerce Dashboard for XYZ brand"
                 loading="lazy"
               />
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   );
